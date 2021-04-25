@@ -4,7 +4,6 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-
   def create
     Post.create(content: params[:content], checked: false)
     render json:{ post: post}
